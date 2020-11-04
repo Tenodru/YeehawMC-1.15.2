@@ -20,6 +20,8 @@ import net.minecraftforge.registries.ObjectHolder;
 public class BlockInit 
 {
 	public static final Block cedar_planks = null;
+	public static final Block blue_topaz_ore = null;
+	public static final Block pyrite_ore = null;
 			
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
@@ -30,6 +32,24 @@ public class BlockInit
 				.hardnessAndResistance(2.0f, 3.0f)
 				.sound(SoundType.WOOD))
 				.setRegistryName("cedar_planks"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.ROCK)
+				.hardnessAndResistance(3.0f, 3.0f)
+				.sound(SoundType.STONE)
+				.harvestLevel(2)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("blue_topaz_ore"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.ROCK)
+				.hardnessAndResistance(3.0f, 3.0f)
+				.sound(SoundType.STONE)
+				.harvestLevel(2)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("pyrite_ore"));
 	}
 	
 	@SubscribeEvent
@@ -39,5 +59,15 @@ public class BlockInit
 		.register(new BlockItem(cedar_planks, new Item.Properties()
 				.group(ItemGroup.BUILDING_BLOCKS))
 				.setRegistryName("cedar_planks"));
+		
+		event.getRegistry()
+		.register(new BlockItem(blue_topaz_ore, new Item.Properties()
+				.group(ItemGroup.BUILDING_BLOCKS))
+				.setRegistryName("blue_topaz_ore"));
+		
+		event.getRegistry()
+		.register(new BlockItem(pyrite_ore, new Item.Properties()
+				.group(ItemGroup.BUILDING_BLOCKS))
+				.setRegistryName("pyrite_ore"));
 	}	
 }
