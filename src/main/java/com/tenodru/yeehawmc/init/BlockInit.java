@@ -22,6 +22,7 @@ public class BlockInit
 	public static final Block cedar_planks = null;
 	public static final Block blue_topaz_ore = null;
 	public static final Block pyrite_ore = null;
+	public static final Block limestone = null;
 			
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
@@ -36,7 +37,7 @@ public class BlockInit
 		event.getRegistry()
 		.register(new Block(Block.Properties
 				.create(Material.ROCK)
-				.hardnessAndResistance(3.0f, 3.0f)
+				.hardnessAndResistance(3.0f, 6.0f)
 				.sound(SoundType.STONE)
 				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE))
@@ -45,11 +46,20 @@ public class BlockInit
 		event.getRegistry()
 		.register(new Block(Block.Properties
 				.create(Material.ROCK)
-				.hardnessAndResistance(3.0f, 3.0f)
+				.hardnessAndResistance(3.0f, 6.0f)
 				.sound(SoundType.STONE)
 				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE))
 				.setRegistryName("pyrite_ore"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.ROCK)
+				.hardnessAndResistance(1.5f, 6.0f)
+				.sound(SoundType.STONE)
+				.harvestLevel(1)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("limestone"));
 	}
 	
 	@SubscribeEvent
@@ -69,5 +79,10 @@ public class BlockInit
 		.register(new BlockItem(pyrite_ore, new Item.Properties()
 				.group(ItemGroup.BUILDING_BLOCKS))
 				.setRegistryName("pyrite_ore"));
+		
+		event.getRegistry()
+		.register(new BlockItem(limestone, new Item.Properties()
+				.group(ItemGroup.BUILDING_BLOCKS))
+				.setRegistryName("limestone"));
 	}	
 }
