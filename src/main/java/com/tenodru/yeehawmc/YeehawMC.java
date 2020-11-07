@@ -3,9 +3,13 @@ package com.tenodru.yeehawmc;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.tenodru.yeehawmc.init.BiomeInit;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
 
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -27,15 +31,21 @@ public class YeehawMC
     public static final Logger LOGGER = LogManager.getLogger();
 
     public YeehawMC() {
-        // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+    	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    	modEventBus.addListener(this::setup);
+    	modEventBus.addListener(this::doClientStuff);
+        
+        BiomeInit.BIOMES.register(modEventBus);
         
         instance = this;
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+    
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+    	BiomeInit.registerBiomes();
     }
 
     private void setup(final FMLCommonSetupEvent event)
