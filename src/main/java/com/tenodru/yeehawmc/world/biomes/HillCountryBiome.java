@@ -24,8 +24,10 @@ public class HillCountryBiome extends Biome{
 		this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.DONKEY, 5, 2, 3));
 		
 		// Add carvers, like caves
-		this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
-		this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CANYON, new ProbabilityConfig(0.02f)));
+		//this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
+		//this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CANYON, new ProbabilityConfig(0.02f)));
+		DefaultBiomeFeatures.addCarvers(this);
+	    DefaultBiomeFeatures.addStructures(this);
 		
 		// Add lakes
 		this.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, Feature.LAKE
@@ -33,8 +35,10 @@ public class HillCountryBiome extends Biome{
 				.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(4))));
 		
 		// Add vegetation
-		DefaultBiomeFeatures.addDenseGrass(this);
+		DefaultBiomeFeatures.addPlainsTallGrass(this);
+		DefaultBiomeFeatures.addVeryDenseGrass(this);
 		DefaultBiomeFeatures.addSavannaTrees(this);
+		
 	}
 	
 	

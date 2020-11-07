@@ -27,7 +27,7 @@ public class BiomeInit {
 					.waterColor(0x3F76E4)
 					.waterFogColor(0x050533)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig
-							(Blocks.PODZOL.getDefaultState(), 
+							(Blocks.GRASS_BLOCK.getDefaultState(), 
 									BlockInit.limestone.getDefaultState(), 
 									Blocks.DIRT.getDefaultState()))
 					.category(Category.PLAINS)
@@ -36,11 +36,11 @@ public class BiomeInit {
 					.parent(null)));
 	
 	public static void registerBiomes() {
-		registerBiome(HILL_COUNTRY_BIOME.get(), Type.OVERWORLD, Type.PLAINS);
+		registerBiome(HILL_COUNTRY_BIOME.get(), Type.OVERWORLD, Type.HOT, Type.SAVANNA);
 	}
 	
 	private static void registerBiome(Biome biome, Type... types) {
-		BiomeDictionary.addTypes(biome,  types);
+		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);
 	}
 
