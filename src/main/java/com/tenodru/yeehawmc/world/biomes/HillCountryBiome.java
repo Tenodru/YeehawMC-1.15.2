@@ -1,5 +1,7 @@
 package com.tenodru.yeehawmc.world.biomes;
 
+import com.tenodru.yeehawmc.world.feature.CedarTree;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -10,6 +12,7 @@ import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.ChanceConfig;
 import net.minecraft.world.gen.placement.Placement;
 
@@ -38,6 +41,10 @@ public class HillCountryBiome extends Biome{
 		DefaultBiomeFeatures.addPlainsTallGrass(this);
 		DefaultBiomeFeatures.addVeryDenseGrass(this);
 		DefaultBiomeFeatures.addSavannaTrees(this);
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.NORMAL_TREE
+				.withConfiguration(CedarTree.CEDAR_TREE_CONFIG)
+				.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP
+						.configure(new AtSurfaceWithExtraConfig(7, 0.1f, 1))));
 		
 	}
 	

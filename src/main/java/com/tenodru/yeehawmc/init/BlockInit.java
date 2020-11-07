@@ -1,6 +1,8 @@
 package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
+import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
+import com.tenodru.yeehawmc.world.feature.CedarTree;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -84,7 +86,10 @@ public class BlockInit
 				.from(Blocks.OAK_LEAVES))
 				.setRegistryName("cedar_leaves"));
 		
-		
+		event.getRegistry()
+		.register(new CedarSaplingBlock(() -> new CedarTree(), Block.Properties
+				.from(Blocks.OAK_SAPLING))
+				.setRegistryName("cedar_sapling"));
 	}
 	
 	@SubscribeEvent
@@ -119,6 +124,11 @@ public class BlockInit
 		.register(new BlockItem(cedar_leaves, new Item.Properties()
 				.group(ItemGroup.BUILDING_BLOCKS))
 				.setRegistryName("cedar_leaves"));
+		
+		event.getRegistry()
+		.register(new BlockItem(cedar_sapling, new Item.Properties()
+				.group(ItemGroup.MATERIALS))
+				.setRegistryName("cedar_sapling"));
 	}
 	
 	// Deferred Registry Blocks
