@@ -4,8 +4,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.tenodru.yeehawmc.init.BiomeInit;
+import com.tenodru.yeehawmc.init.BlockInit;
+import com.tenodru.yeehawmc.init.ItemInit;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
 
+import net.minecraft.item.Item;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,6 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.IForgeRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("yeehawmc")
@@ -35,6 +39,7 @@ public class YeehawMC
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
         
+    	
         BiomeInit.BIOMES.register(modEventBus);
         
         instance = this;

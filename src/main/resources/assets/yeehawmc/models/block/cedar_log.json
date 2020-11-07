@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "yeehawmc:blocks/cedar_log_top",
+        "side": "yeehawmc:blocks/cedar_log"
+    }
+}
