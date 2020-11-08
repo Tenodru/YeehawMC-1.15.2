@@ -16,10 +16,12 @@ public class CedarTree extends Tree{
 	public static final TreeFeatureConfig CEDAR_TREE_CONFIG = (new TreeFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BlockInit.cedar_log.getDefaultState()), 
 					new SimpleBlockStateProvider(BlockInit.cedar_leaves.getDefaultState()), 
-					new BlobFoliagePlacer(3, 0)))
+					new BlobFoliagePlacer(2, 1)))
 			.baseHeight(14)
 			.heightRandA(5)
-			.foliageHeight(9)
+			.foliageHeight(3)
+			.foliageHeightRandom(1)
+			.trunkTopOffset(2)
 			.ignoreVines()
 			.setSapling((IPlantable)BlockInit.cedar_sapling)
 			.build();

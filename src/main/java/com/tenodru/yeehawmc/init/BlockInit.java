@@ -122,12 +122,12 @@ public class BlockInit
 		
 		event.getRegistry()
 		.register(new BlockItem(cedar_leaves, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(ItemGroup.DECORATIONS))
 				.setRegistryName("cedar_leaves"));
 		
 		event.getRegistry()
 		.register(new BlockItem(cedar_sapling, new Item.Properties()
-				.group(ItemGroup.MATERIALS))
+				.group(ItemGroup.DECORATIONS))
 				.setRegistryName("cedar_sapling"));
 	}
 	
