@@ -32,5 +32,7 @@ public class ItemInit
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
 				.group(ItemGroup.MISC)).setRegistryName("pyrite_ingot"));
+		
+		//HERE!
 	}
 }
