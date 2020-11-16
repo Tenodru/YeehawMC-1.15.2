@@ -30,6 +30,7 @@ public class ItemInit
 
 	public static final Item blue_topaz = null;
 	public static final Item pyrite_ingot = null;
+	public static final Item cowboy_hat = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -46,9 +47,9 @@ public class ItemInit
 				new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("cowboy_hat"));
 	}
 
-	public enum ModArmorMaterial implements IArmorMaterial {HEAD
+	public enum ModArmorMaterial implements IArmorMaterial {
 		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 6.9F, () -> {
-			return Ingredient.fromItems(ItemInit.pyrite_ingot);
+			return Ingredient.fromItems(ItemInit.blue_topaz);
 		});
 
 		private static final int[] MAX_DAMAGE_ARRAY = new int[] { 16, 16, 16, 16 };
