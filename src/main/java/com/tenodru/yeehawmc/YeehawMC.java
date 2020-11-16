@@ -4,8 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.tenodru.yeehawmc.init.BiomeInit;
-import com.tenodru.yeehawmc.init.BlockInit;
-import com.tenodru.yeehawmc.init.ItemInit;
+import com.tenodru.yeehawmc.init.BlockInitNew;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
 
 import net.minecraft.item.Item;
@@ -39,13 +38,24 @@ public class YeehawMC
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
         
-    	
+    	BlockInitNew.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
         
         instance = this;
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+    
+    @SubscribeEvent
+    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
+    	final IForgeRegistry<Item> registry = event.getRegistry();
+    	
+    	/*
+    	BlockInitNew.BLOCKS.getEntries().stream().map(RegistryObject::get).foreach(block -> {
+    		final Item.Properties properties = new Item.Properties().group()
+    	})*/
+    	
     }
     
     @SubscribeEvent
