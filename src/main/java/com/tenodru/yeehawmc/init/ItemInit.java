@@ -42,13 +42,12 @@ public class ItemInit
 		.register(new Item(new Item.Properties()
 				.group(ItemGroup.MISC)).setRegistryName("pyrite_ingot"));
 		
-		//HERE!
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD,
-				new Item.Properties().group(ItemGroup.MISC)).setRegistryName("cowboy_hat"));
+				new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("cowboy_hat"));
 	}
 
-	public enum ModArmorMaterial implements IArmorMaterial {
-		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.field_226142_fM_, 6.9F, () -> {
+	public enum ModArmorMaterial implements IArmorMaterial {HEAD
+		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 6.9F, () -> {
 			return Ingredient.fromItems(ItemInit.pyrite_ingot);
 		});
 
