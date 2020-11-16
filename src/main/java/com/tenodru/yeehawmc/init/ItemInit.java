@@ -47,7 +47,7 @@ public class ItemInit
 	}
 
 	public enum ModArmorMaterial implements IArmorMaterial {
-		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 6.9F, () -> {
+		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.field_226142_fM_, 6.9F, () -> {
 			return Ingredient.fromItems(ItemInit.pyrite_ingot);
 		});
 
