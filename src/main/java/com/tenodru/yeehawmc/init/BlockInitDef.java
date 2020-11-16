@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInitDef {
+	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
 	public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_item", 
