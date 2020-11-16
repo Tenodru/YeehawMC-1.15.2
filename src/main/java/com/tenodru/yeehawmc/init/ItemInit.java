@@ -4,12 +4,12 @@ package com.tenodru.yeehawmc.init;
 import java.util.function.Supplier;
 
 import com.tenodru.yeehawmc.YeehawMC;
+import com.tenodru.yeehawmc.YeehawMC.YeehawItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 import net.minecraft.util.SoundEvent;
@@ -36,17 +36,17 @@ public class ItemInit
 	{
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(ItemGroup.MISC)).setRegistryName("blue_topaz"));
+				.group(YeehawItemGroup.instance)).setRegistryName("blue_topaz"));
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(ItemGroup.MISC)).setRegistryName("pyrite_ingot"));
+				.group(YeehawItemGroup.instance)).setRegistryName("pyrite_ingot"));
 		
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD,
-				new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("cowboy_hat"));
+				new Item.Properties().group(YeehawItemGroup.instance)).setRegistryName("cowboy_hat"));
 	}
 
-	public enum ModArmorMaterial implements IArmorMaterial {HEAD
+	public enum ModArmorMaterial implements IArmorMaterial {
 		TEST(YeehawMC.MOD_ID + ":test", 5, new int[] {7, 9, 11, 7}, 420, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 6.9F, () -> {
 			return Ingredient.fromItems(ItemInit.pyrite_ingot);
 		});

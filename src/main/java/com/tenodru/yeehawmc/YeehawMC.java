@@ -4,15 +4,20 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.tenodru.yeehawmc.init.BiomeInit;
-import com.tenodru.yeehawmc.init.BlockInitNew;
+import com.tenodru.yeehawmc.init.BlockInitDef;
+import com.tenodru.yeehawmc.init.ItemInit;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -38,7 +43,7 @@ public class YeehawMC
     	modEventBus.addListener(this::setup);
     	modEventBus.addListener(this::doClientStuff);
         
-    	BlockInitNew.BLOCKS.register(modEventBus);
+    	BlockInitDef.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
         
         instance = this;
@@ -51,11 +56,15 @@ public class YeehawMC
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
     	final IForgeRegistry<Item> registry = event.getRegistry();
     	
-    	/*
-    	BlockInitNew.BLOCKS.getEntries().stream().map(RegistryObject::get).foreach(block -> {
-    		final Item.Properties properties = new Item.Properties().group()
-    	})*/
     	
+    	BlockInitDef.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+    		final Item.Properties properties = new Item.Properties().group(YeehawItemGroup.instance);
+    		final BlockItem blockItem = new BlockItem(block, properties);
+    		blockItem.setRegistryName(block.getRegistryName());
+    		registry.register(blockItem);
+    	});
+    	
+    	LOGGER.debug("Registered BlockItems.");
     }
     
     @SubscribeEvent
@@ -78,6 +87,20 @@ public class YeehawMC
     public void onServerStarting(FMLServerStartingEvent event) 
     {
         
+    }
+    
+    public static class YeehawItemGroup extends ItemGroup
+    {
+    	public static final YeehawItemGroup instance = new YeehawItemGroup(ItemGroup.GROUPS.length, "yeehawtab");
+    	private YeehawItemGroup(int index, String label)
+    	{
+    		super (index, label);
+    	}
+    	
+    	@Override
+    	public ItemStack createIcon() {
+    		return new ItemStack(ItemInit.blue_topaz);
+    	}
     }
     
     @SubscribeEvent

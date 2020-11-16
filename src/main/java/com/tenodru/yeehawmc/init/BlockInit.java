@@ -1,6 +1,7 @@
 package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
+import com.tenodru.yeehawmc.YeehawMC.YeehawItemGroup;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 
@@ -8,7 +9,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
-import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -18,11 +18,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(YeehawMC.MOD_ID)
@@ -97,37 +94,37 @@ public class BlockInit
 	{
 		event.getRegistry()
 		.register(new BlockItem(cedar_planks, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_planks"));
 		
 		event.getRegistry()
 		.register(new BlockItem(blue_topaz_ore, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("blue_topaz_ore"));
 		
 		event.getRegistry()
 		.register(new BlockItem(pyrite_ore, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("pyrite_ore"));
 		
 		event.getRegistry()
 		.register(new BlockItem(limestone, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("limestone"));
 		
 		event.getRegistry()
 		.register(new BlockItem(cedar_log, new Item.Properties()
-				.group(ItemGroup.BUILDING_BLOCKS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_log"));
 		
 		event.getRegistry()
 		.register(new BlockItem(cedar_leaves, new Item.Properties()
-				.group(ItemGroup.DECORATIONS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_leaves"));
 		
 		event.getRegistry()
 		.register(new BlockItem(cedar_sapling, new Item.Properties()
-				.group(ItemGroup.DECORATIONS))
+				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_sapling"));
 	}
 	
