@@ -72,7 +72,7 @@ public class BlockInit
 				.harvestLevel(1)
 				.harvestTool(ToolType.PICKAXE))
 				.setRegistryName("limestone"));
-		
+		/*
 		event.getRegistry()
 		.register(new LogBlock(MaterialColor.WOOD, Block.Properties
 				.from(Blocks.OAK_LOG))
@@ -87,6 +87,7 @@ public class BlockInit
 		.register(new CedarSaplingBlock(() -> new CedarTree(), Block.Properties
 				.from(Blocks.OAK_SAPLING))
 				.setRegistryName("cedar_sapling"));
+		*/
 	}
 	
 	@SubscribeEvent
@@ -111,7 +112,7 @@ public class BlockInit
 		.register(new BlockItem(limestone, new Item.Properties()
 				.group(YeehawItemGroup.instance))
 				.setRegistryName("limestone"));
-		
+		/*
 		event.getRegistry()
 		.register(new BlockItem(cedar_log, new Item.Properties()
 				.group(YeehawItemGroup.instance))
@@ -126,6 +127,7 @@ public class BlockInit
 		.register(new BlockItem(cedar_sapling, new Item.Properties()
 				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_sapling"));
+		*/
 	}
 	
 	// Deferred Registry Blocks
