@@ -2,6 +2,7 @@ package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
+import com.tenodru.yeehawmc.world.feature.CedarTree;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -14,7 +15,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInitDef {
-	@SuppressWarnings("deprecation")
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
 	public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_item", 
@@ -27,5 +27,5 @@ public class BlockInitDef {
 			() -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
 	
 	public static final RegistryObject<Block> CEDAR_SAPLING = BLOCKS.register("cedar_sapling", 
-			() -> new CedarSaplingBlock(null, Block.Properties.from(Blocks.OAK_SAPLING)));
+			() -> new CedarSaplingBlock(() -> new CedarTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
 }
