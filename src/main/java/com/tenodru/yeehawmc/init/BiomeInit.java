@@ -22,7 +22,7 @@ public class BiomeInit {
 	public static final RegistryObject<Biome> HILL_COUNTRY_BIOME = BIOMES.register("hill_country", 
 			() -> new HillCountryBiome(new Biome.Builder()
 					.precipitation(RainType.RAIN)
-					.scale(1.0f)
+					.scale(.1f)
 					.temperature(0.7f)
 					.waterColor(0x3F76E4)
 					.waterFogColor(0x050533)
