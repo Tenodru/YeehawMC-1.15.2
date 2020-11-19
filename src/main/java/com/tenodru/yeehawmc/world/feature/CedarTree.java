@@ -17,7 +17,7 @@ public class CedarTree extends Tree{
 	public static final TreeFeatureConfig CEDAR_TREE_CONFIG = (new TreeFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BlockInitDef.CEDAR_LOG.get().getDefaultState()), 
 					new SimpleBlockStateProvider(BlockInitDef.CEDAR_LEAVES.get().getDefaultState()), 
-					new BlobFoliagePlacer(2, 1)))
+					new BlobFoliagePlacer(1, 1)))
 			.baseHeight(7)
 			.heightRandA(3)
 			.foliageHeight(3)
