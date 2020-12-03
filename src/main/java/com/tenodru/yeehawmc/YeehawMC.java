@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import com.tenodru.yeehawmc.init.BiomeInit;
 import com.tenodru.yeehawmc.init.BlockInitDef;
 import com.tenodru.yeehawmc.init.ItemInit;
+import com.tenodru.yeehawmc.init.ItemInitDef;
 import com.tenodru.yeehawmc.init.ModEntityTypes;
 import com.tenodru.yeehawmc.init.SoundInit;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
@@ -15,6 +16,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -48,7 +50,7 @@ public class YeehawMC {
 		modEventBus.addListener(this::doClientStuff);
 
 		SoundInit.SOUNDS.register(modEventBus);
-		ItemInit.ITEMS.register(modEventBus);
+		ItemInitDef.ITEMS.register(modEventBus);
 		BlockInitDef.BLOCKS.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		BiomeInit.BIOMES.register(modEventBus);
@@ -65,6 +67,7 @@ public class YeehawMC {
 
 	@SubscribeEvent
 	public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
+		
 		final IForgeRegistry<Item> registry = event.getRegistry();
 
 		BlockInitDef.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
@@ -97,7 +100,8 @@ public class YeehawMC {
 	public void onServerStarting(FMLServerStartingEvent event) {
 
 	}
-
+	
+	//Item groups
 	public static class YeehawItemGroup extends ItemGroup {
 		public static final YeehawItemGroup instance = new YeehawItemGroup(ItemGroup.GROUPS.length, "yeehawtab");
 
@@ -108,6 +112,19 @@ public class YeehawMC {
 		@Override
 		public ItemStack createIcon() {
 			return new ItemStack(ItemInit.blue_topaz);
+		}
+	}
+	
+	public static class YeehawMusicItemGroup extends ItemGroup {
+		public static final YeehawMusicItemGroup instance = new YeehawMusicItemGroup(ItemGroup.GROUPS.length, "yeehawmusictab");
+
+		private YeehawMusicItemGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(ItemInitDef.CREPUSCULAR_DISC.get());
 		}
 	}
 

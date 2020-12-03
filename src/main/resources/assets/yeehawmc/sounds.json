@@ -36,5 +36,36 @@
 				"stream": true
 			}
 		]
+	},
+	
+	"disc.crepuscular": {
+		"category": "disc",
+		"subtitle": "crepuscular",
+		"sounds": [
+			{
+				"name": "yeehawmc:disc/crepuscular",
+				"stream": true
+			}
+		]
+	},
+	"disc.sunset": {
+		"category": "disc",
+		"subtitle": "sunset on the desert",
+		"sounds": [
+			{
+				"name": "yeehawmc:disc/sunset_on_the_desert",
+				"stream": true
+			}
+		]
+	},
+	"disc.stillnorest": {
+		"category": "disc",
+		"subtitle": "still no rest",
+		"sounds": [
+			{
+				"name": "yeehawmc:disc/still_no_rest",
+				"stream": true
+			}
+		]
 	}
 }

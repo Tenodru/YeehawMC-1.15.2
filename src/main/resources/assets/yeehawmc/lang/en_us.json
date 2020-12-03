@@ -1,9 +1,16 @@
 {
 	"itemGroup.yeehawtab": "YeehawMC",
+	"itemGroup.yeehawmusictab": "YeehawMC Music",
 
 	"item.yeehawmc.blue_topaz": "Blue Topaz",
 	"item.yeehawmc.pyrite_ingot": "Pyrite Ingot",
 	"item.yeehawmc.cowboy_hat": "Cowboy Hat",
+	"item.yeehawmc.music_disc_crepuscular": "crepuscular",
+	"item.yeehawmc.music_disc_crepuscular.desc": "lorefiend - crepuscular",
+	"item.yeehawmc.music_disc_sunset": "sunset on the desert",
+	"item.yeehawmc.music_disc_sunset.desc": "lorefiend - sunset on the desert",
+	"item.yeehawmc.music_disc_stillnorest": "still no rest",
+	"item.yeehawmc.music_disc_stillnorest.desc": "lorefiend - still no rest",
 	
 	"block.yeehawmc.cedar_planks": "Cedar Planks",
 	"block.yeehawmc.blue_topaz_ore": "Blue Topaz Ore",

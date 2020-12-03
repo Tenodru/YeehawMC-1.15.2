@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "yeehawmc:items/music_disc_sunset_on_the_desert"
+	}
+}

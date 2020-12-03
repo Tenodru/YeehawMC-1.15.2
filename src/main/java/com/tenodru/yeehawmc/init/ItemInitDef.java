@@ -1,0 +1,28 @@
+package com.tenodru.yeehawmc.init;
+
+import com.tenodru.yeehawmc.YeehawMC;
+import com.tenodru.yeehawmc.YeehawMC.YeehawMusicItemGroup;
+import com.tenodru.yeehawmc.objects.items.ModMusicDiscItem;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.Rarity;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+public class ItemInitDef {
+	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, YeehawMC.MOD_ID);
+	
+	//Music Discs
+	public static final RegistryObject<Item> CREPUSCULAR_DISC = ITEMS.register("music_disc_crepuscular", 
+			() -> new ModMusicDiscItem(5, SoundInit.LAZY_MUSIC_CREPUSCULAR.get(), 
+					new Item.Properties().group(YeehawMusicItemGroup.instance).maxStackSize(1).rarity(Rarity.RARE)));
+	
+	public static final RegistryObject<Item> SUNSET_DISC = ITEMS.register("music_disc_sunset", 
+			() -> new ModMusicDiscItem(5, SoundInit.LAZY_MUSIC_SUNSET.get(), 
+					new Item.Properties().group(YeehawMusicItemGroup.instance).maxStackSize(1).rarity(Rarity.RARE)));
+	
+	public static final RegistryObject<Item> NO_REST_DISC = ITEMS.register("music_disc_stillnorest", 
+			() -> new ModMusicDiscItem(5, SoundInit.LAZY_MUSIC_STILLNOREST.get(), 
+					new Item.Properties().group(YeehawMusicItemGroup.instance).maxStackSize(1).rarity(Rarity.RARE)));
+}
