@@ -1,8 +1,8 @@
 package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
-import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
-import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
+//import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
+//import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 
@@ -22,9 +22,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BlockInitDef {
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
-	public static final RegistryObject<Block> TEST_BLOCK = BLOCKS.register("test_item", 
-			() -> new Block( Block.Properties.create(Material.EARTH)));
-	
 	public static final RegistryObject<Block> CEDAR_LOG = BLOCKS.register("cedar_log", 
 			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
 	
@@ -39,10 +36,10 @@ public class BlockInitDef {
 	
 	public static final RegistryObject<Block> CEDAR_FENCE = BLOCKS.register("cedar_fence",
 			() -> new FenceBlock(Block.Properties.create(Material.WOOD)));
-	
+	/*
 	public static final RegistryObject<Block> CEDAR_BUTTON = BLOCKS.register("cedar_button",
 			() -> new CedarButtonBlock(Block.Properties.create(Material.WOOD)));
 	
 	public static final RegistryObject<Block> CEDAR_PRESSURE_PLATE = BLOCKS.register("cedar_pressure_plate",
-			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD)));
+			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD)));*/
 }

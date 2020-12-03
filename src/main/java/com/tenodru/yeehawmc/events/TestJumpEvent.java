@@ -16,7 +16,6 @@ public class TestJumpEvent
 	// Fires when an entity jumps.
 	public static void testJumpEvent(LivingJumpEvent event)
 	{
-		YeehawMC.LOGGER.info("TestJumpEvent fired!");
 		LivingEntity livingEntity = event.getEntityLiving();
 		World world = livingEntity.getEntityWorld();
 	}

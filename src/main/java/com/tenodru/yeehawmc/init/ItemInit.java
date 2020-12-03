@@ -20,13 +20,15 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(YeehawMC.MOD_ID)
 @Mod.EventBusSubscriber(modid = YeehawMC.MOD_ID, bus = Bus.MOD)
 public class ItemInit 
 {
-	//public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, YeehawMC.MOD_ID);
+	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, YeehawMC.MOD_ID);
 
 	public static final Item blue_topaz = null;
 	public static final Item pyrite_ingot = null;
@@ -42,6 +44,10 @@ public class ItemInit
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
 				.group(YeehawItemGroup.instance)).setRegistryName("pyrite_ingot"));
+		
+		event.getRegistry()
+		.register(new Item(new Item.Properties()
+				.group(YeehawItemGroup.instance)).setRegistryName("music_crepuscular"));
 		
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD,
 				new Item.Properties().group(YeehawItemGroup.instance)).setRegistryName("cowboy_hat"));
