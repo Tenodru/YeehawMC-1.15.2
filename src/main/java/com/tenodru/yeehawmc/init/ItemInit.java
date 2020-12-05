@@ -32,6 +32,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ItemInit 
 {
 	public static final Item blue_topaz = null;
+	public static final Item opal_gem = null;
 	public static final Item pyrite_ingot = null;
 	public static final Item cowboy_hat = null;
 	
@@ -41,6 +42,10 @@ public class ItemInit
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
 				.group(YeehawItemGroup.instance)).setRegistryName("blue_topaz"));
+		
+		event.getRegistry()
+		.register(new Item(new Item.Properties()
+				.group(YeehawItemGroup.instance)).setRegistryName("opal_gem"));
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()

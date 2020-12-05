@@ -33,6 +33,8 @@ public class BlockInit
 	public static final Block blue_topaz_ore = null;
 	public static final Block pyrite_ore = null;
 	public static final Block opal_ore = null;
+	public static final Block blue_topaz_block = null;
+	public static final Block opal_block = null;
 	public static final Block cedar_log = null;
 			
 	@SubscribeEvent
@@ -41,7 +43,7 @@ public class BlockInit
 		event.getRegistry()
 		.register(new Block(Block.Properties
 				.create(Material.WOOD)
-				.hardnessAndResistance(2.0f, 15.0f)
+				.hardnessAndResistance(2.0f, 2.0f)
 				.sound(SoundType.WOOD))
 				.setRegistryName("cedar_planks"));
 		
@@ -80,6 +82,24 @@ public class BlockInit
 				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE))
 				.setRegistryName("opal_ore"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.IRON)
+				.hardnessAndResistance(5.0f, 6.0f)
+				.sound(SoundType.METAL)
+				.harvestLevel(2)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("blue_topaz_block"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.IRON)
+				.hardnessAndResistance(5.0f, 6.0f)
+				.sound(SoundType.METAL)
+				.harvestLevel(2)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("opal_block"));
 	}
 	
 	@SubscribeEvent
@@ -109,5 +129,15 @@ public class BlockInit
 		.register(new BlockItem(opal_ore, new Item.Properties()
 				.group(YeehawItemGroup.instance))
 				.setRegistryName("opal_ore"));
+		
+		event.getRegistry()
+		.register(new BlockItem(blue_topaz_block, new Item.Properties()
+				.group(YeehawItemGroup.instance))
+				.setRegistryName("blue_topaz_block"));
+		
+		event.getRegistry()
+		.register(new BlockItem(opal_block, new Item.Properties()
+				.group(YeehawItemGroup.instance))
+				.setRegistryName("opal_block"));
 	}
 }

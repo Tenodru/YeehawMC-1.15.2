@@ -4,6 +4,7 @@
 
 	"item.yeehawmc.blue_topaz": "Blue Topaz",
 	"item.yeehawmc.pyrite_ingot": "Pyrite Ingot",
+	"item.yeehawmc.opal_gem": "Opal",
 	"item.yeehawmc.cowboy_hat": "Cowboy Hat",
 	"item.yeehawmc.music_disc_crepuscular": "crepuscular",
 	"item.yeehawmc.music_disc_crepuscular.desc": "lorefiend - crepuscular",
@@ -17,6 +18,8 @@
 	"block.yeehawmc.blue_topaz_ore": "Blue Topaz Ore",
 	"block.yeehawmc.pyrite_ore": "Pyrite Ore",
 	"block.yeehawmc.opal_ore": "Opal Ore",
+	"block.yeehawmc.blue_topaz_block": "Blue Topaz Block",
+	"block.yeehawmc.opal_block": "Opal Block",
 	"block.yeehawmc.cedar_log": "Cedar Log",
 	"block.yeehawmc.cedar_leaves": "Cedar Leaves",
 	"block.yeehawmc.cedar_sapling": "Cedar Sapling",

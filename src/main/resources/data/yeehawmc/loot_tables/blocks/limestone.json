@@ -8,6 +8,11 @@
           "type": "minecraft:item",
           "name": "yeehawmc:limestone"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
       ]
     }
   ]
