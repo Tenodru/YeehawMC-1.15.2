@@ -29,10 +29,10 @@ public class BlockInit
 	//public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
 	public static final Block cedar_planks = null;
+	public static final Block limestone = null;
 	public static final Block blue_topaz_ore = null;
 	public static final Block pyrite_ore = null;
 	public static final Block opal_ore = null;
-	public static final Block limestone = null;
 	public static final Block cedar_log = null;
 			
 	@SubscribeEvent
@@ -44,6 +44,15 @@ public class BlockInit
 				.hardnessAndResistance(2.0f, 15.0f)
 				.sound(SoundType.WOOD))
 				.setRegistryName("cedar_planks"));
+		
+		event.getRegistry()
+		.register(new Block(Block.Properties
+				.create(Material.ROCK)
+				.hardnessAndResistance(1.5f, 6.0f)
+				.sound(SoundType.STONE)
+				.harvestLevel(1)
+				.harvestTool(ToolType.PICKAXE))
+				.setRegistryName("limestone"));
 		
 		event.getRegistry()
 		.register(new Block(Block.Properties
@@ -71,15 +80,6 @@ public class BlockInit
 				.harvestLevel(2)
 				.harvestTool(ToolType.PICKAXE))
 				.setRegistryName("opal_ore"));
-		
-		event.getRegistry()
-		.register(new Block(Block.Properties
-				.create(Material.ROCK)
-				.hardnessAndResistance(1.5f, 6.0f)
-				.sound(SoundType.STONE)
-				.harvestLevel(1)
-				.harvestTool(ToolType.PICKAXE))
-				.setRegistryName("limestone"));
 	}
 	
 	@SubscribeEvent
@@ -89,6 +89,11 @@ public class BlockInit
 		.register(new BlockItem(cedar_planks, new Item.Properties()
 				.group(YeehawItemGroup.instance))
 				.setRegistryName("cedar_planks"));
+		
+		event.getRegistry()
+		.register(new BlockItem(limestone, new Item.Properties()
+				.group(YeehawItemGroup.instance))
+				.setRegistryName("limestone"));
 		
 		event.getRegistry()
 		.register(new BlockItem(blue_topaz_ore, new Item.Properties()
@@ -101,8 +106,8 @@ public class BlockInit
 				.setRegistryName("pyrite_ore"));
 		
 		event.getRegistry()
-		.register(new BlockItem(limestone, new Item.Properties()
+		.register(new BlockItem(opal_ore, new Item.Properties()
 				.group(YeehawItemGroup.instance))
-				.setRegistryName("limestone"));
+				.setRegistryName("opal_ore"));
 	}
 }
