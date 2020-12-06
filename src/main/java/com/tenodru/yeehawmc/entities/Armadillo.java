@@ -134,5 +134,10 @@ public class Armadillo extends AnimalEntity {
 	protected SoundEvent getDeathSound() {
 		return SoundInit.DEATH.get();
 	}
+	
+	@Override
+	protected float getSoundVolume() {
+		return 0.2f;
+	}
 
 }
