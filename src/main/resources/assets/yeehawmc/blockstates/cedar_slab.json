@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "yeehawmc:block/cedar_slab" },
+        "type=top": { "model": "yeehawmc:block/cedar_slab_top" },
+        "type=double": { "model": "yeehawmc:block/cedar_planks" }
+    }
+}

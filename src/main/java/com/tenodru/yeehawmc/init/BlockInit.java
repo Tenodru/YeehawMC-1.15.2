@@ -28,7 +28,6 @@ public class BlockInit
 {
 	//public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
-	public static final Block cedar_planks = null;
 	public static final Block limestone = null;
 	public static final Block blue_topaz_ore = null;
 	public static final Block pyrite_ore = null;
@@ -40,12 +39,13 @@ public class BlockInit
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
 	{
+		/*
 		event.getRegistry()
 		.register(new Block(Block.Properties
 				.create(Material.WOOD)
 				.hardnessAndResistance(2.0f, 2.0f)
 				.sound(SoundType.WOOD))
-				.setRegistryName("cedar_planks"));
+				.setRegistryName("cedar_planks"));*/
 		
 		event.getRegistry()
 		.register(new Block(Block.Properties
@@ -105,10 +105,11 @@ public class BlockInit
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event)
 	{
+		/*
 		event.getRegistry()
 		.register(new BlockItem(cedar_planks, new Item.Properties()
 				.group(YeehawItemGroup.instance))
-				.setRegistryName("cedar_planks"));
+				.setRegistryName("cedar_planks"));*/
 		
 		event.getRegistry()
 		.register(new BlockItem(limestone, new Item.Properties()

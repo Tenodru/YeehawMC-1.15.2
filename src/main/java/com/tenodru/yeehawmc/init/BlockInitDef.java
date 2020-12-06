@@ -13,6 +13,7 @@ import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
@@ -38,8 +39,14 @@ public class BlockInitDef {
 	public static final RegistryObject<Block> CEDAR_SAPLING = BLOCKS.register("cedar_sapling", 
 			() -> new CedarSaplingBlock(() -> new CedarTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
 	
+	public static final RegistryObject<Block> CEDAR_PLANKS = BLOCKS.register("cedar_planks",
+			() -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
+	
+	public static final RegistryObject<Block> CEDAR_SLAB = BLOCKS.register("cedar_slab",
+			() -> new SlabBlock(Block.Properties.from(CEDAR_PLANKS.get())));
+	
 	public static final RegistryObject<Block> CEDAR_STAIRS = BLOCKS.register("cedar_stairs",
-			() -> new StairsBlock(() -> BlockInit.cedar_planks.getDefaultState(), Block.Properties.create(Material.WOOD)));
+			() -> new StairsBlock(() -> CEDAR_PLANKS.get().getDefaultState(), Block.Properties.create(Material.WOOD)));
 	
 	public static final RegistryObject<Block> CEDAR_FENCE = BLOCKS.register("cedar_fence",
 			() -> new FenceBlock(Block.Properties.create(Material.WOOD)));

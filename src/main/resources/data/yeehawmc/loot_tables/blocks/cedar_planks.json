@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:cedar_planks"
+          "name": "yeehawmc:cedar_planks"
         }
       ],
       "conditions": [

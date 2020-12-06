@@ -17,6 +17,7 @@ public class YeehawPlantGen {
 		ForgeRegistries.BIOMES.forEach(biome -> {
 			if (biome == BiomeInit.HILL_COUNTRY_BIOME.get())
 			{
+				// FrequencyConfig is how often these patches of flowers/plants will generate
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 						Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.BLUEBONNET_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(8))));
@@ -27,7 +28,7 @@ public class YeehawPlantGen {
 				
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 						Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.COUNTRY_SHRUB_CONFIG)
-						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(16))));
+						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(24))));
 			}
 		});
 	}
