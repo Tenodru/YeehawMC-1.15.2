@@ -1,7 +1,9 @@
 package com.tenodru.yeehawmc.world.biomes;
 
 import com.tenodru.yeehawmc.world.feature.CedarTree;
+import com.tenodru.yeehawmc.world.feature.PlantFeatures;
 
+import net.minecraft.advancements.criterion.PlayerPredicate.Default;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -14,6 +16,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.ChanceConfig;
+import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 
 public class HillCountryBiome extends Biome{
@@ -42,10 +45,35 @@ public class HillCountryBiome extends Biome{
 		DefaultBiomeFeatures.addPlainsTallGrass(this);
 		DefaultBiomeFeatures.addVeryDenseGrass(this);
 		DefaultBiomeFeatures.addSavannaTrees(this);
+		DefaultBiomeFeatures.addDeadBushes(this);
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.DANDELION_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.ALLIUM_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.OXEYE_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.PEONY_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
+		
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.NORMAL_TREE
 				.withConfiguration(CedarTree.CEDAR_TREE_CONFIG)
 				.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP
 						.configure(new AtSurfaceWithExtraConfig(8, 0.1f, 1))));
+		
+		// Add default ore
+		DefaultBiomeFeatures.addOres(this);
+		
+		// Add structures
+		DefaultBiomeFeatures.addMonsterRooms(this);
+		
 		
 	}
 	
