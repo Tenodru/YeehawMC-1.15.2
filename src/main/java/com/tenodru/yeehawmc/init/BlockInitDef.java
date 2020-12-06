@@ -12,6 +12,7 @@ import com.tenodru.yeehawmc.world.feature.CedarTree;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
@@ -53,6 +54,9 @@ public class BlockInitDef {
 	
 	public static final RegistryObject<Block> CEDAR_FENCE = BLOCKS.register("cedar_fence",
 			() -> new FenceBlock(Block.Properties.from(Blocks.OAK_FENCE)));
+	
+	public static final RegistryObject<Block> CEDAR_FENCE_GATE = BLOCKS.register("cedar_fence_gate",
+			() -> new FenceGateBlock(Block.Properties.from(Blocks.OAK_FENCE_GATE)));
 	
 	public static final RegistryObject<Block> CEDAR_BUTTON = BLOCKS.register("cedar_button",
 			() -> new CedarButtonBlock(Block.Properties.from(Blocks.OAK_BUTTON)));
