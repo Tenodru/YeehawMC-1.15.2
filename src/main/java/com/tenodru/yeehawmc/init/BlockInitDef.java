@@ -29,7 +29,11 @@ public class BlockInitDef {
 			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
 	
 	public static final RegistryObject<Block> CEDAR_LEAVES = BLOCKS.register("cedar_leaves", 
-			() -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+			() -> new LeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.FOLIAGE)
+					.hardnessAndResistance(0.2f)
+					.tickRandomly()
+					.sound(SoundType.PLANT)
+					.notSolid()));
 	
 	public static final RegistryObject<Block> CEDAR_SAPLING = BLOCKS.register("cedar_sapling", 
 			() -> new CedarSaplingBlock(() -> new CedarTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
