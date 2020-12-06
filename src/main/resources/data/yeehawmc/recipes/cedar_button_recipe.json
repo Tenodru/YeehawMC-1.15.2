@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "yeehawmc:cedar_planks"
+    }
+  ],
+  "result": {
+    "item": "yeehawmc:cedar_button"
+  }
+}

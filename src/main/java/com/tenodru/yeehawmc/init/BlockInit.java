@@ -34,7 +34,6 @@ public class BlockInit
 	public static final Block opal_ore = null;
 	public static final Block blue_topaz_block = null;
 	public static final Block opal_block = null;
-	public static final Block cedar_log = null;
 			
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)

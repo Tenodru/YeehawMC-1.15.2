@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "/Y/",
+        "/Y/"
+    ],
+    "key": {
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "Y": {
+            "item": "yeehawmc:cedar_planks"
+        }
+    },
+    "result": {
+        "item": "yeehawmc:cedar_fence_gate",
+        "count": 1
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "yeehawmc:cedar_planks"
+        }
+    },
+    "result": {
+        "item": "yeehawmc:cedar_door",
+        "count": 3
+    }
+}
