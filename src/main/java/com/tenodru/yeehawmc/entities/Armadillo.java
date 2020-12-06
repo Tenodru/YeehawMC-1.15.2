@@ -122,13 +122,11 @@ public class Armadillo extends AnimalEntity {
 	
 	@Override
 	protected SoundEvent getAmbientSound() {
-		YeehawMC.LOGGER.debug("Played ambient sound!");
 		return SoundInit.AMBIENT.get();
 	}
 	
 	@Override
 	protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-		YeehawMC.LOGGER.debug("Played hurt sound!");
 		return SoundInit.HURT.get();
 	}
 	

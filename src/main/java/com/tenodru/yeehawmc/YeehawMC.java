@@ -10,13 +10,13 @@ import com.tenodru.yeehawmc.init.ItemInitDef;
 import com.tenodru.yeehawmc.init.ModEntityTypes;
 import com.tenodru.yeehawmc.init.SoundInit;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
+import com.tenodru.yeehawmc.world.gen.YeehawPlantGen;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -131,5 +131,6 @@ public class YeehawMC {
 	@SubscribeEvent
 	public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
 		YeehawOreGen.generateOre();
+		YeehawPlantGen.generateFlowers();
 	}
 }

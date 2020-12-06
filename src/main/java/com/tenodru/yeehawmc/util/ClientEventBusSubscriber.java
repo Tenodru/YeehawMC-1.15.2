@@ -20,7 +20,12 @@ public class ClientEventBusSubscriber {
 	@SubscribeEvent
 	public static void ClientSetup(FMLClientSetupEvent event)
 	{
+		// Plant rendering
 		RenderTypeLookup.setRenderLayer(BlockInitDef.CEDAR_SAPLING.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInitDef.BLUEBONNET.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInitDef.PAINTBRUSH_FLOWER.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInitDef.COUNTRY_SHRUB.get(), RenderType.getCutout());
+		// Entity rendering
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.ARMADILLO.get(), ArmadilloRender::new);
 	}
 	

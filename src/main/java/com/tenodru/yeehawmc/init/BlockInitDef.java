@@ -4,17 +4,20 @@ import com.tenodru.yeehawmc.YeehawMC;
 //import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
 //import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
+import com.tenodru.yeehawmc.objects.blocks.ModBushBlock;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
-import net.minecraft.block.PressurePlateBlock.Sensitivity;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,4 +45,14 @@ public class BlockInitDef {
 	
 	public static final RegistryObject<Block> CEDAR_PRESSURE_PLATE = BLOCKS.register("cedar_pressure_plate",
 			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD)));*/
+	
+	public static final RegistryObject<Block> BLUEBONNET = BLOCKS.register("bluebonnet", 
+			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
+	
+	public static final RegistryObject<Block> PAINTBRUSH_FLOWER = BLOCKS.register("paintbrush_flower", 
+			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
+	
+	public static final RegistryObject<Block> COUNTRY_SHRUB = BLOCKS.register("country_shrub", 
+			() -> new ModBushBlock(Block.Properties.from(Blocks.FERN)));
+	
 }
