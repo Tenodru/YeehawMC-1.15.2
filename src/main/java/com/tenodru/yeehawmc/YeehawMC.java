@@ -9,6 +9,7 @@ import com.tenodru.yeehawmc.init.ItemInit;
 import com.tenodru.yeehawmc.init.ItemInitDef;
 import com.tenodru.yeehawmc.init.ModEntityTypes;
 import com.tenodru.yeehawmc.init.SoundInit;
+import com.tenodru.yeehawmc.objects.items.ModSpawnEggItem;
 import com.tenodru.yeehawmc.world.gen.YeehawOreGen;
 import com.tenodru.yeehawmc.world.gen.YeehawPlantGen;
 
@@ -84,6 +85,7 @@ public class YeehawMC {
 	public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
 		event.getRegistry().registerAll(ModEntityTypes.ARMADILLO.get());
 		ModEntityTypes.registerEntityWorldSpawns();
+		ModSpawnEggItem.initSpawnEggs();
 	}
 
 	@SubscribeEvent
