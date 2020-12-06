@@ -21,42 +21,42 @@ public class PlantFeatures {
 	public static final BlockClusterFeatureConfig BLUEBONNET_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BLUEBONNET), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig PAINTBRUSH_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(PAINTBRUSH), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig DANDELION_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(DANDELION), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig ALLIUM_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(ALLIUM), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig OXEYE_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(OXEYE), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig PEONY_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(PEONY), new SimpleBlockPlacer())
 			.tries(32)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig COUNTRY_SHRUB_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(COUNTRY_SHRUB), new SimpleBlockPlacer())
 			.tries(64)
-			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 }

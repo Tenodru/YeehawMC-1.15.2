@@ -18,6 +18,7 @@ public class YeehawPlantGen {
 			if (biome == BiomeInit.HILL_COUNTRY_BIOME.get())
 			{
 				// FrequencyConfig is how often these patches of flowers/plants will generate
+				/*
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 						Feature.FLOWER.withConfiguration(PlantFeatures.BLUEBONNET_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
@@ -28,7 +29,7 @@ public class YeehawPlantGen {
 				
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 						Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.COUNTRY_SHRUB_CONFIG)
-						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(24))));
+						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(24))));*/
 			}
 		});
 	}

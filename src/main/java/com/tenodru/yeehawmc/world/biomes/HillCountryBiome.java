@@ -48,6 +48,18 @@ public class HillCountryBiome extends Biome{
 		DefaultBiomeFeatures.addDeadBushes(this);
 		
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.BLUEBONNET_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.PAINTBRUSH_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(7))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.COUNTRY_SHRUB_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(24))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 				Feature.FLOWER.withConfiguration(PlantFeatures.DANDELION_CONFIG)
 				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
 		
