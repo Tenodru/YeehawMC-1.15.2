@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "yeehawmc:blocks/cedar_door_bottom",
+        "top": "yeehawmc:blocks/cedar_door_top"
+    }
+}

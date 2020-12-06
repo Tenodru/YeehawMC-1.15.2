@@ -2,10 +2,12 @@ package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
 import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
+import com.tenodru.yeehawmc.objects.blocks.CedarDoor;
 import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 //import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
 //import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
+import com.tenodru.yeehawmc.objects.blocks.CedarTrapDoorBlock;
 import com.tenodru.yeehawmc.objects.blocks.ModBushBlock;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 
@@ -20,6 +22,7 @@ import net.minecraft.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TrapDoorBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.potion.Effects;
@@ -63,6 +66,12 @@ public class BlockInitDef {
 	
 	public static final RegistryObject<Block> CEDAR_PRESSURE_PLATE = BLOCKS.register("cedar_pressure_plate",
 			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)));
+	
+	public static final RegistryObject<Block> CEDAR_DOOR = BLOCKS.register("cedar_door",
+			() -> new CedarDoor(Block.Properties.from(Blocks.OAK_DOOR)));
+	
+	public static final RegistryObject<Block> CEDAR_TRAPDOOR = BLOCKS.register("cedar_trapdoor",
+			() -> new CedarTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
 	
 	public static final RegistryObject<Block> BLUEBONNET = BLOCKS.register("bluebonnet", 
 			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
