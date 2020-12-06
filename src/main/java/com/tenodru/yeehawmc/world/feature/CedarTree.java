@@ -2,11 +2,12 @@ package com.tenodru.yeehawmc.world.feature;
 
 import java.util.Random;
 
-import com.tenodru.yeehawmc.init.BlockInit;
 import com.tenodru.yeehawmc.init.BlockInitDef;
 
+import net.minecraft.block.trees.AcaciaTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.feature.AcaciaFeature;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
@@ -17,15 +18,16 @@ public class CedarTree extends Tree{
 	public static final TreeFeatureConfig CEDAR_TREE_CONFIG = (new TreeFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BlockInitDef.CEDAR_LOG.get().getDefaultState()), 
 					new SimpleBlockStateProvider(BlockInitDef.CEDAR_LEAVES.get().getDefaultState()), 
-					new BlobFoliagePlacer(1, 1)))
-			.baseHeight(7)
+					new BlobFoliagePlacer(2, 0)))
+			.baseHeight(5)
 			.heightRandA(3)
-			.foliageHeight(3)
+			.foliageHeight(2)
 			.foliageHeightRandom(1)
 			.trunkTopOffset(2)
 			.ignoreVines()
 			.setSapling((IPlantable)BlockInitDef.CEDAR_SAPLING.get())
 			.build();
+	
 	
 	@Override
 	protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean b) {

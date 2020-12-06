@@ -16,19 +16,19 @@ public class PlantFeatures {
 
 	public static final BlockClusterFeatureConfig BLUEBONNET_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BLUEBONNET), new SimpleBlockPlacer())
-			.tries(8)
+			.tries(32)
 			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig PAINTBRUSH_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(PAINTBRUSH), new SimpleBlockPlacer())
-			.tries(10)
+			.tries(32)
 			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
 			.build();
 	
 	public static final BlockClusterFeatureConfig COUNTRY_SHRUB_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(COUNTRY_SHRUB), new SimpleBlockPlacer())
-			.tries(16)
+			.tries(64)
 			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock()))).func_227317_b_()
 			.build();
 }

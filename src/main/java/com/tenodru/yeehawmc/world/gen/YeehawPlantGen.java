@@ -19,11 +19,11 @@ public class YeehawPlantGen {
 			{
 				// FrequencyConfig is how often these patches of flowers/plants will generate
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-						Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.BLUEBONNET_CONFIG)
+						Feature.FLOWER.withConfiguration(PlantFeatures.BLUEBONNET_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(8))));
 				
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
-						Feature.RANDOM_PATCH.withConfiguration(PlantFeatures.PAINTBRUSH_CONFIG)
+						Feature.FLOWER.withConfiguration(PlantFeatures.PAINTBRUSH_CONFIG)
 						.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(10))));
 				
 				biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
