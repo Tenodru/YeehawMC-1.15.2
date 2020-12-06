@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "yeehawmc:opal_ore"
+    },
+    "result": "yeehawmc:opal",
+    "experience": 1,
+    "cookingtime": 100
+}

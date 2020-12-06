@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "yeehawmc:pyrite_ingot"
+        }
+    },
+    "result": {
+        "item": "yeehawmc:pyrite_block",
+        "count": 1
+    }
+}

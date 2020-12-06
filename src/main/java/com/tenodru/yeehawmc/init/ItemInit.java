@@ -45,7 +45,7 @@ public class ItemInit
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(YeehawItemGroup.instance)).setRegistryName("opal_gem"));
+				.group(YeehawItemGroup.instance)).setRegistryName("opal"));
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
