@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "yeehawmc:blocks/cedar_planks",
+        "top": "yeehawmc:blocks/cedar_planks",
+        "side": "yeehawmc:blocks/cedar_planks"
+    }
+}

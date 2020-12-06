@@ -1,6 +1,8 @@
 package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
+import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
+import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 //import com.tenodru.yeehawmc.objects.blocks.CedarButtonBlock;
 //import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
@@ -13,6 +15,7 @@ import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.LogBlock;
+import net.minecraft.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
@@ -46,16 +49,16 @@ public class BlockInitDef {
 			() -> new SlabBlock(Block.Properties.from(CEDAR_PLANKS.get())));
 	
 	public static final RegistryObject<Block> CEDAR_STAIRS = BLOCKS.register("cedar_stairs",
-			() -> new StairsBlock(() -> CEDAR_PLANKS.get().getDefaultState(), Block.Properties.create(Material.WOOD)));
+			() -> new StairsBlock(() -> CEDAR_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)));
 	
 	public static final RegistryObject<Block> CEDAR_FENCE = BLOCKS.register("cedar_fence",
-			() -> new FenceBlock(Block.Properties.create(Material.WOOD)));
-	/*
+			() -> new FenceBlock(Block.Properties.from(Blocks.OAK_FENCE)));
+	
 	public static final RegistryObject<Block> CEDAR_BUTTON = BLOCKS.register("cedar_button",
-			() -> new CedarButtonBlock(Block.Properties.create(Material.WOOD)));
+			() -> new CedarButtonBlock(Block.Properties.from(Blocks.OAK_BUTTON)));
 	
 	public static final RegistryObject<Block> CEDAR_PRESSURE_PLATE = BLOCKS.register("cedar_pressure_plate",
-			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.create(Material.WOOD)));*/
+			() -> new CedarPressurePlateBlock(Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)));
 	
 	public static final RegistryObject<Block> BLUEBONNET = BLOCKS.register("bluebonnet", 
 			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
