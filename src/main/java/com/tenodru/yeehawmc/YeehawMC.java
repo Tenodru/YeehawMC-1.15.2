@@ -53,6 +53,7 @@ public class YeehawMC {
 		SoundInit.SOUNDS.register(modEventBus);
 		ItemInitDef.ITEMS.register(modEventBus);
 		BlockInitDef.BLOCKS.register(modEventBus);
+		BlockInitDef.PLANTS.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		BiomeInit.BIOMES.register(modEventBus);
 

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "yeehawmc:blocks/prickly_pear_cactus_stage0"
+    }
+}

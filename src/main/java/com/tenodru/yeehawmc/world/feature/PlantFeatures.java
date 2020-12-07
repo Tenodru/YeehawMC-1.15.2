@@ -17,6 +17,7 @@ public class PlantFeatures {
 	public static final BlockState ALLIUM = Blocks.ALLIUM.getDefaultState();
 	public static final BlockState OXEYE = Blocks.OXEYE_DAISY.getDefaultState();
 	public static final BlockState PEONY = Blocks.PEONY.getDefaultState();
+	public static final BlockState PRICKLY_PEAR_CACTUS = BlockInitDef.PRICKLY_PEAR_CACTUS.get().getDefaultState();
 
 	public static final BlockClusterFeatureConfig BLUEBONNET_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(BLUEBONNET), new SimpleBlockPlacer())
@@ -57,6 +58,12 @@ public class PlantFeatures {
 	public static final BlockClusterFeatureConfig COUNTRY_SHRUB_CONFIG = (new BlockClusterFeatureConfig
 			.Builder(new SimpleBlockStateProvider(COUNTRY_SHRUB), new SimpleBlockPlacer())
 			.tries(64)
+			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
+			.build();
+	
+	public static final BlockClusterFeatureConfig PRICKLY_PEAR_CACTUS_CONFIG = (new BlockClusterFeatureConfig
+			.Builder(new SimpleBlockStateProvider(PRICKLY_PEAR_CACTUS), new SimpleBlockPlacer())
+			.tries(24)
 			.whitelist(ImmutableSet.of(Blocks.GRASS_BLOCK.getBlock(), Blocks.COARSE_DIRT.getBlock(), Blocks.PODZOL.getBlock()))).func_227317_b_()
 			.build();
 }

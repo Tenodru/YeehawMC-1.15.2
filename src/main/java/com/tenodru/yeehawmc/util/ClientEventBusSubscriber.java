@@ -25,6 +25,7 @@ public class ClientEventBusSubscriber {
 		RenderTypeLookup.setRenderLayer(BlockInitDef.BLUEBONNET.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInitDef.PAINTBRUSH_FLOWER.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInitDef.COUNTRY_SHRUB.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInitDef.PRICKLY_PEAR_CACTUS.get(), RenderType.getCutout());
 		// Block Rendering
 		RenderTypeLookup.setRenderLayer(BlockInitDef.CEDAR_DOOR.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInitDef.CEDAR_TRAPDOOR.get(), RenderType.getCutout());

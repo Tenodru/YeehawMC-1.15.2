@@ -32,4 +32,5 @@ public class ItemInitDef {
 	public static final RegistryObject<Item> ARMADILLO_SPAWN_EGG = ITEMS.register("armadillo_spawn_egg", 
 			() -> new ModSpawnEggItem(ModEntityTypes.ARMADILLO, 0x683C33, 0xAF6C63,
 					new Item.Properties().group(YeehawItemGroup.instance).maxStackSize(16)));
+	
 }

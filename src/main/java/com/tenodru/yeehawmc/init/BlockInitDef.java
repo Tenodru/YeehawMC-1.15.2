@@ -9,6 +9,7 @@ import com.tenodru.yeehawmc.objects.blocks.CedarPressurePlateBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarSaplingBlock;
 import com.tenodru.yeehawmc.objects.blocks.CedarTrapDoorBlock;
 import com.tenodru.yeehawmc.objects.blocks.ModBushBlock;
+import com.tenodru.yeehawmc.objects.blocks.PricklyPearCactiBlock;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 
 import net.minecraft.block.Block;
@@ -22,7 +23,8 @@ import net.minecraft.block.PressurePlateBlock.Sensitivity;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
-import net.minecraft.block.TrapDoorBlock;
+import net.minecraft.block.StandingSignBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.potion.Effects;
@@ -32,6 +34,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInitDef {
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
+	public static final DeferredRegister<Block> PLANTS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
 	public static final RegistryObject<Block> CEDAR_LOG = BLOCKS.register("cedar_log", 
 			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
@@ -81,5 +84,8 @@ public class BlockInitDef {
 	
 	public static final RegistryObject<Block> COUNTRY_SHRUB = BLOCKS.register("country_shrub", 
 			() -> new ModBushBlock(Block.Properties.from(Blocks.FERN)));
+	
+	public static final RegistryObject<Block> PRICKLY_PEAR_CACTUS = PLANTS.register("prickly_pear_cactus", 
+			() -> new PricklyPearCactiBlock(Block.Properties.from(Blocks.SWEET_BERRY_BUSH)));
 	
 }

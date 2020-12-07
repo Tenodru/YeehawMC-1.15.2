@@ -8,6 +8,7 @@ import com.tenodru.yeehawmc.YeehawMC.YeehawItemGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Food;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
@@ -30,6 +31,7 @@ public class ItemInit
 	public static final Item opal_gem = null;
 	public static final Item pyrite_ingot = null;
 	public static final Item cowboy_hat = null;
+	public static final Item prickly_pear = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -48,6 +50,14 @@ public class ItemInit
 		
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD,
 				new Item.Properties().group(YeehawItemGroup.instance)).setRegistryName("cowboy_hat"));
+	
+		event.getRegistry()
+		.register(new Item(new Item.Properties()
+				.group(YeehawItemGroup.instance)
+				.food(new Food.Builder()
+						.hunger(2)
+						.saturation(1)
+						.setAlwaysEdible().build())).setRegistryName("prickly_pear"));
 	}
 
 	public enum ModArmorMaterial implements IArmorMaterial {

@@ -3,7 +3,6 @@ package com.tenodru.yeehawmc.world.biomes;
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 import com.tenodru.yeehawmc.world.feature.PlantFeatures;
 
-import net.minecraft.advancements.criterion.PlayerPredicate.Default;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -74,6 +73,10 @@ public class HillCountryBiome extends Biome{
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
 				Feature.FLOWER.withConfiguration(PlantFeatures.PEONY_CONFIG)
 				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
+		
+		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, 
+				Feature.FLOWER.withConfiguration(PlantFeatures.PRICKLY_PEAR_CACTUS_CONFIG)
+				.withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(4))));
 		
 		this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.NORMAL_TREE
 				.withConfiguration(CedarTree.CEDAR_TREE_CONFIG)
