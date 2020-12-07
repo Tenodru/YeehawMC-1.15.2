@@ -27,7 +27,7 @@ public class BiomeInit {
 			() -> new HillCountryBiome(new Biome.Builder()
 					.precipitation(RainType.RAIN)
 					.scale(.15f)
-					.temperature(0.7f)
+					.temperature(1.0f)
 					.waterColor(0x3F76E4)
 					.waterFogColor(0x050533)
 					.surfaceBuilder(
@@ -43,7 +43,7 @@ public class BiomeInit {
 					.parent(null)));
 	
 	public static void registerBiomes() {
-		registerBiome(HILL_COUNTRY_BIOME.get(), Type.OVERWORLD, Type.HOT, Type.SAVANNA);
+		registerBiome(HILL_COUNTRY_BIOME.get(), Type.OVERWORLD, Type.DRY, Type.PLAINS, Type.SAVANNA, Type.HILLS, Type.FOREST);
 	}
 	
 	private static void registerBiome(Biome biome, Type... types) {

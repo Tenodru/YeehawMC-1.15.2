@@ -27,7 +27,7 @@ modId="yeehawmc" #mandatory
 version="1.0" #mandatory
 
 # A display name for the mod
-displayName="Yeehaw MC" #mandatory
+displayName="Hill Country" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification <here>
 updateJSONURL="http://myurl.me/" #optional
@@ -46,7 +46,7 @@ authors="Tenodru" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-	Put a description here later.
+	Adds the Hill country biome, armadillos, new ores, new foliage, and cedar wood!
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
