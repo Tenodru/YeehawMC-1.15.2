@@ -2,6 +2,7 @@ package com.tenodru.yeehawmc.world.biomes;
 
 import com.tenodru.yeehawmc.world.feature.CedarTree;
 import com.tenodru.yeehawmc.world.feature.PlantFeatures;
+import com.tenodru.yeehawmc.world.feature.YeehawBiomeFeatures;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
@@ -38,7 +39,7 @@ public class HillCountryBiome extends Biome{
 		// Add lakes
 		this.addFeature(GenerationStage.Decoration.LOCAL_MODIFICATIONS, Feature.LAKE
 				.withConfiguration(new BlockStateFeatureConfig(Blocks.WATER.getDefaultState()))
-				.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(3))));
+				.withPlacement(Placement.WATER_LAKE.configure(new ChanceConfig(2))));
 		
 		// Add vegetation
 		DefaultBiomeFeatures.addPlainsTallGrass(this);
@@ -83,8 +84,12 @@ public class HillCountryBiome extends Biome{
 				.withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP
 						.configure(new AtSurfaceWithExtraConfig(8, 0.1f, 1))));
 		
-		// Add default ore
+		DefaultBiomeFeatures.addReedsAndPumpkins(this);
+		
+		// Add underground stuff
 		DefaultBiomeFeatures.addOres(this);
+		DefaultBiomeFeatures.addStoneVariants(this);
+		YeehawBiomeFeatures.addStoneVariants(this);
 		
 		// Add structures
 		DefaultBiomeFeatures.addMonsterRooms(this);
