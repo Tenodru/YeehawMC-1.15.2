@@ -1,6 +1,9 @@
 {
-	"itemGroup.yeehawtab": "YeehawMC",
-	"itemGroup.yeehawmusictab": "YeehawMC Music",
+	"itemGroup.yeehawtab": "Hill Country",
+	"itemGroup.yeehawmusictab": "Hill Country Music",
+	"itemGroup.yeehawplantstab": "Hill Country Foliage",
+	"itemGroup.yeehawgemstab": "Hill Country Metals and Gems",
+	"itemGroup.yeehawmisctab": "Hill Country Misc",
 
 	"item.yeehawmc.blue_topaz": "Blue Topaz",
 	"item.yeehawmc.pyrite_ingot": "Pyrite Ingot",

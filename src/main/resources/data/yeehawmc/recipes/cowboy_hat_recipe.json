@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#Y#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:leather"
+        },
+        "Y": {
+            "item": "yeehawmc:blue_topaz"
+        }
+    },
+    "result": {
+        "item": "yeehawmc:cowboy_hat",
+        "count": 1
+    }
+}

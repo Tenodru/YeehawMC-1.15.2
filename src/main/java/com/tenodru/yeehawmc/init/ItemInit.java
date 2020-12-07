@@ -4,7 +4,9 @@ package com.tenodru.yeehawmc.init;
 import java.util.function.Supplier;
 
 import com.tenodru.yeehawmc.YeehawMC;
-import com.tenodru.yeehawmc.YeehawMC.YeehawItemGroup;
+import com.tenodru.yeehawmc.YeehawMC.YeehawGemsGroup;
+import com.tenodru.yeehawmc.YeehawMC.YeehawMiscGroup;
+import com.tenodru.yeehawmc.YeehawMC.YeehawPlantsGroup;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -38,22 +40,22 @@ public class ItemInit
 	{
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(YeehawItemGroup.instance)).setRegistryName("blue_topaz"));
+				.group(YeehawGemsGroup.instance)).setRegistryName("blue_topaz"));
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(YeehawItemGroup.instance)).setRegistryName("opal"));
+				.group(YeehawGemsGroup.instance)).setRegistryName("opal"));
 		
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(YeehawItemGroup.instance)).setRegistryName("pyrite_ingot"));
+				.group(YeehawGemsGroup.instance)).setRegistryName("pyrite_ingot"));
 		
 		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TEST, EquipmentSlotType.HEAD,
-				new Item.Properties().group(YeehawItemGroup.instance)).setRegistryName("cowboy_hat"));
+				new Item.Properties().group(YeehawMiscGroup.instance)).setRegistryName("cowboy_hat"));
 	
 		event.getRegistry()
 		.register(new Item(new Item.Properties()
-				.group(YeehawItemGroup.instance)
+				.group(YeehawPlantsGroup.instance)
 				.food(new Food.Builder()
 						.hunger(2)
 						.saturation(1)

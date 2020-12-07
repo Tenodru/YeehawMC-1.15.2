@@ -54,6 +54,7 @@ public class YeehawMC {
 		ItemInitDef.ITEMS.register(modEventBus);
 		BlockInitDef.BLOCKS.register(modEventBus);
 		BlockInitDef.PLANTS.register(modEventBus);
+		BlockInitDef.BLOCK_ONLY.register(modEventBus);
 		ModEntityTypes.ENTITY_TYPES.register(modEventBus);
 		BiomeInit.BIOMES.register(modEventBus);
 
@@ -74,6 +75,13 @@ public class YeehawMC {
 
 		BlockInitDef.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
 			final Item.Properties properties = new Item.Properties().group(YeehawItemGroup.instance);
+			final BlockItem blockItem = new BlockItem(block, properties);
+			blockItem.setRegistryName(block.getRegistryName());
+			registry.register(blockItem);
+		});
+		
+		BlockInitDef.PLANTS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
+			final Item.Properties properties = new Item.Properties().group(YeehawPlantsGroup.instance);
 			final BlockItem blockItem = new BlockItem(block, properties);
 			blockItem.setRegistryName(block.getRegistryName());
 			registry.register(blockItem);
@@ -114,7 +122,7 @@ public class YeehawMC {
 
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(ItemInit.blue_topaz);
+			return new ItemStack(BlockInitDef.CEDAR_PLANKS.get().asItem());
 		}
 	}
 	
@@ -128,6 +136,45 @@ public class YeehawMC {
 		@Override
 		public ItemStack createIcon() {
 			return new ItemStack(ItemInitDef.CREPUSCULAR_DISC.get());
+		}
+	}
+	
+	public static class YeehawPlantsGroup extends ItemGroup {
+		public static final YeehawPlantsGroup instance = new YeehawPlantsGroup(ItemGroup.GROUPS.length, "yeehawplantstab");
+
+		private YeehawPlantsGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(BlockInitDef.BLUEBONNET.get().asItem());
+		}
+	}
+	
+	public static class YeehawGemsGroup extends ItemGroup {
+		public static final YeehawGemsGroup instance = new YeehawGemsGroup(ItemGroup.GROUPS.length, "yeehawgemstab");
+
+		private YeehawGemsGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(ItemInit.blue_topaz);
+		}
+	}
+	
+	public static class YeehawMiscGroup extends ItemGroup {
+		public static final YeehawMiscGroup instance = new YeehawMiscGroup(ItemGroup.GROUPS.length, "yeehawmisctab");
+
+		private YeehawMiscGroup(int index, String label) {
+			super(index, label);
+		}
+
+		@Override
+		public ItemStack createIcon() {
+			return new ItemStack(ItemInit.cowboy_hat);
 		}
 	}
 

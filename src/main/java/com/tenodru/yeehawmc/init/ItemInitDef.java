@@ -2,6 +2,7 @@ package com.tenodru.yeehawmc.init;
 
 import com.tenodru.yeehawmc.YeehawMC;
 import com.tenodru.yeehawmc.YeehawMC.YeehawItemGroup;
+import com.tenodru.yeehawmc.YeehawMC.YeehawMiscGroup;
 import com.tenodru.yeehawmc.YeehawMC.YeehawMusicItemGroup;
 import com.tenodru.yeehawmc.objects.items.ModMusicDiscItem;
 import com.tenodru.yeehawmc.objects.items.ModSpawnEggItem;
@@ -31,6 +32,6 @@ public class ItemInitDef {
 	// Spawn Eggs
 	public static final RegistryObject<Item> ARMADILLO_SPAWN_EGG = ITEMS.register("armadillo_spawn_egg", 
 			() -> new ModSpawnEggItem(ModEntityTypes.ARMADILLO, 0x683C33, 0xAF6C63,
-					new Item.Properties().group(YeehawItemGroup.instance).maxStackSize(16)));
+					new Item.Properties().group(YeehawMiscGroup.instance).maxStackSize(16)));
 	
 }

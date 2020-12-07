@@ -35,11 +35,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BlockInitDef {
 	public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	public static final DeferredRegister<Block> PLANTS = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
+	public static final DeferredRegister<Block> BLOCK_ONLY = new DeferredRegister<>(ForgeRegistries.BLOCKS, YeehawMC.MOD_ID);
 	
 	public static final RegistryObject<Block> CEDAR_LOG = BLOCKS.register("cedar_log", 
 			() -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
 	
-	public static final RegistryObject<Block> CEDAR_LEAVES = BLOCKS.register("cedar_leaves", 
+	public static final RegistryObject<Block> CEDAR_LEAVES = PLANTS.register("cedar_leaves", 
 			() -> new LeavesBlock(Block.Properties.create(Material.LEAVES, MaterialColor.FOLIAGE)
 					.hardnessAndResistance(0.2f)
 					.tickRandomly()
@@ -76,16 +77,16 @@ public class BlockInitDef {
 	public static final RegistryObject<Block> CEDAR_TRAPDOOR = BLOCKS.register("cedar_trapdoor",
 			() -> new CedarTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
 	
-	public static final RegistryObject<Block> BLUEBONNET = BLOCKS.register("bluebonnet", 
+	public static final RegistryObject<Block> BLUEBONNET = PLANTS.register("bluebonnet", 
 			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
 	
-	public static final RegistryObject<Block> PAINTBRUSH_FLOWER = BLOCKS.register("paintbrush_flower", 
+	public static final RegistryObject<Block> PAINTBRUSH_FLOWER = PLANTS.register("paintbrush_flower", 
 			() -> new FlowerBlock(Effects.SATURATION, 7, Block.Properties.from(Blocks.BLUE_ORCHID)));
 	
-	public static final RegistryObject<Block> COUNTRY_SHRUB = BLOCKS.register("country_shrub", 
+	public static final RegistryObject<Block> COUNTRY_SHRUB = PLANTS.register("country_shrub", 
 			() -> new ModBushBlock(Block.Properties.from(Blocks.FERN)));
 	
-	public static final RegistryObject<Block> PRICKLY_PEAR_CACTUS = PLANTS.register("prickly_pear_cactus", 
+	public static final RegistryObject<Block> PRICKLY_PEAR_CACTUS = BLOCK_ONLY.register("prickly_pear_cactus", 
 			() -> new PricklyPearCactiBlock(Block.Properties.from(Blocks.SWEET_BERRY_BUSH)));
 	
 }
